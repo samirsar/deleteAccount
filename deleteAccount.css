@@ -24,6 +24,10 @@
     border-radius: 0px;
     --bs-btn-font-family: 'Roboto', sans-serif;
 }
+.headerFont{
+    font-family:'Roboto', sans-serif ;
+    font-weight: bold;
+}
 .btn-primary{
     -bs-btn-color: #fff;
     --bs-btn-bg: #0FA374;
@@ -39,9 +43,6 @@
     --bs-btn-disabled-color: #fff;
     --bs-btn-disabled-bg: #0FA374;
     --bs-btn-disabled-border-color: #0FA374;
-}
-#resendOtpBtn{
-    cursor:pointer;
 }
 
 .para{
@@ -63,5 +64,19 @@
     border-radius: 5px;
     z-index: 999;
   }
+
+  .plain-button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+    color:#0FA374;
+     font-size:12px;
+    /* Add any additional styles as needed */
+  }
+  
   
   
