@@ -1,6 +1,7 @@
 const invalidFeedback=document.getElementById('invalidFeedback');
 const enterMobileNumber=document.getElementById('enterMobileNumber');
 const responseContainer = document.getElementById("otpPhone");
+const otpHeader = document.getElementById("otpHeader");
 const invalidFeedbackOtp=document.getElementById('invalidFeedbackOtp');
 const modal=document.getElementById('staticBackdrop');
 const deleteAccountBtn=document.getElementById('deleteAccountBtn');
@@ -24,6 +25,7 @@ function showElementById(Id) {
 
 
 hideElementById("otpInput");
+hideElementById('otpHeader')
 
 
 
@@ -63,6 +65,7 @@ function sendOtp(event) {
     hideElementById("mobileInput");
     showElementById("otpInput");
     hideElementById('enterMobileNumber');
+    showElementById('otpHeader');
     enterMobileNumber.classList.remove('showBlock');
 
     const data = {
@@ -78,7 +81,7 @@ function sendOtp(event) {
     fetch(url, options)
       .then((response) => response.json())
       .then((responseData) => {
-        responseContainer.innerHTML = `<div style="margin-left:200px; margin-top: -35px"><h6 >Please enter the otp </h6> <p> sent on ******** ${mobileNumber.substr(8)}</p></div>`;
+        responseContainer.innerHTML = ` ${mobileNumber.substr(8)}`;
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -287,7 +290,6 @@ function openmodal()
 
 verifyOtpBtn.addEventListener("click", (event) => {
   verifyAccount(event);
-// openmodal();
 });
 
 
