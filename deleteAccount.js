@@ -30,6 +30,7 @@ hideElementById('otpHeader')
 
 
 
+
 // validation of mobile number using regex 
 function validateMobileNumber(mobileNumber) {
   const regex = /^[0-9]{10}$/;
